@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Ventas Interactivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard de Ventas Interactivo</h1>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+            <li><a href="#" class="nav-link active" data-target="resumen">Resumen</a></li>
+            <li><a href="#" class="nav-link" data-target="detalles">Detalles</a></li>
+            <li><a href="#" class="nav-link" data-target="tendencias">Tendencias</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="resumen" class="section active" aria-labelledby="resumen-heading">
+            <h2 id="resumen-heading">Resumen Anual</h2>
+            <div class="chart-container">
+                <canvas id="barChart" aria-label="Gráfico de barras de ventas mensuales"></canvas>
+            </div>
+        </section>
+
+        <section id="detalles" class="section" aria-labelledby="detalles-heading">
+            <h2 id="detalles-heading">Detalles Mensuales</h2>
+            <div class="chart-container">
+                <canvas id="lineChart" aria-label="Gráfico lineal de tendencias"></canvas>
+            </div>
+        </section>
+
+        <section id="tendencias" class="section" aria-labelledby="tendencias-heading">
+            <h2 id="tendencias-heading">Tendencias</h2>
+            <div class="chart-container">
+                <canvas id="pieChart" aria-label="Gráfico circular de categorías"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
